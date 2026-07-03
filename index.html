@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saltwater Pool Weekly Maintenance</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">16,000 Gallon Saltwater Pool</p>
+      <h1>Weekly Pool Maintenance Checklist</h1>
+      <p>Enter your test results and get simple recommendations to keep your water chemistry in range.</p>
+      <button onclick="window.print()" class="print-btn">Print Checklist</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Enter Test Results</h2>
+      <p class="section-note">Leave any field blank if you did not test it today.</p>
+
+      <form id="poolForm" class="grid-form">
+        <label>
+          Free Chlorine, FC <span>Target: 3–5 ppm</span>
+          <input type="number" step="0.1" id="fc" placeholder="Example: 4" />
+        </label>
+
+        <label>
+          Combined Chlorine, CC <span>Target: 0–0.2 ppm</span>
+          <input type="number" step="0.1" id="cc" placeholder="Example: 0" />
+        </label>
+
+        <label>
+          pH <span>Target: 7.4–7.8</span>
+          <input type="number" step="0.1" id="ph" placeholder="Example: 7.6" />
+        </label>
+
+        <label>
+          Total Alkalinity, TA <span>Target: 60–80 ppm</span>
+          <input type="number" step="1" id="ta" placeholder="Example: 70" />
+        </label>
+
+        <label>
+          Calcium Hardness, CH <span>Target: 250–450 ppm</span>
+          <input type="number" step="1" id="ch" placeholder="Example: 350" />
+        </label>
+
+        <label>
+          Cyanuric Acid, CYA <span>Target: 70–80 ppm</span>
+          <input type="number" step="1" id="cya" placeholder="Example: 75" />
+        </label>
+
+        <label>
+          Salt <span>Target: 3000–3600 ppm</span>
+          <input type="number" step="1" id="salt" placeholder="Example: 3400" />
+        </label>
+
+        <label>
+          Water Temperature <span>Record only</span>
+          <input type="number" step="1" id="temp" placeholder="Example: 82" />
+        </label>
+
+        <div class="form-actions">
+          <button type="submit">Show Recommendations</button>
+          <button type="reset" class="secondary">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card results-card">
+      <h2>Recommendations</h2>
+      <div id="recommendations" class="recommendations empty">
+        Enter your water test results above to see what needs attention.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Weekly Checklist</h2>
+      <div class="checklist">
+        <label><input type="checkbox" /> Empty skimmer baskets</label>
+        <label><input type="checkbox" /> Empty pump basket</label>
+        <label><input type="checkbox" /> Check water level</label>
+        <label><input type="checkbox" /> Test FC, CC, and pH</label>
+        <label><input type="checkbox" /> Brush walls, steps, and waterline</label>
+        <label><input type="checkbox" /> Vacuum pool or empty robotic cleaner</label>
+        <label><input type="checkbox" /> Inspect filter pressure</label>
+        <label><input type="checkbox" /> Verify salt cell is producing chlorine</label>
+        <label><input type="checkbox" /> Inspect salt cell for visible scale</label>
+        <label><input type="checkbox" /> Check equipment pad for leaks or unusual sounds</label>
+        <label><input type="checkbox" /> Confirm timers and pump schedule are correct</label>
+        <label><input type="checkbox" /> Visually confirm clear water and no algae</label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Ideal Ranges</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Ideal Range</th>
+              <th>Target</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Free Chlorine</td><td>3–5 ppm</td><td>4 ppm</td></tr>
+            <tr><td>Combined Chlorine</td><td>0–0.2 ppm</td><td>0 ppm</td></tr>
+            <tr><td>pH</td><td>7.4–7.8</td><td>7.6</td></tr>
+            <tr><td>Total Alkalinity</td><td>60–80 ppm</td><td>70 ppm</td></tr>
+            <tr><td>Calcium Hardness</td><td>250–450 ppm</td><td>350 ppm</td></tr>
+            <tr><td>CYA / Stabilizer</td><td>70–80 ppm</td><td>75 ppm</td></tr>
+            <tr><td>Salt</td><td>3000–3600 ppm</td><td>3400 ppm</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card caution">
+      <h2>Important Notes</h2>
+      <p>This tool gives general maintenance guidance. Always follow chemical label directions and your salt system manufacturer’s salt range. Add chemicals slowly, circulate the water, and retest before making large adjustments.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Saltwater Pool Maintenance Tool • 16,000 Gallons</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
